@@ -43,15 +43,22 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZT-BG-PfU">
-                                <rect key="frame" x="180.66666666666666" y="766" width="67" height="86"/>
+                                <rect key="frame" x="144" y="786" width="140" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="4Zw-ZW-giJ"/>
+                                    <constraint firstAttribute="width" constant="140" id="BBb-CT-mOO"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="nextButtonTaped" destination="BYZ-38-t0r" eventType="touchUpInside" id="rQG-9a-alj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="OZT-BG-PfU" firstAttribute="top" relation="lessThanOrEqual" secondItem="4oW-Yd-tDw" secondAttribute="bottom" constant="150" id="AyZ-zh-cAD"/>
+                            <constraint firstItem="OZT-BG-PfU" firstAttribute="top" relation="lessThanOrEqual" secondItem="4oW-Yd-tDw" secondAttribute="bottom" constant="170" id="AyZ-zh-cAD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OZT-BG-PfU" secondAttribute="bottom" constant="40" id="Q6Y-lw-fDl"/>
                             <constraint firstItem="4oW-Yd-tDw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="82" id="Rq2-vX-kRy"/>
                             <constraint firstItem="4oW-Yd-tDw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="75:463" id="XsA-Dy-l1r"/>
@@ -59,10 +66,16 @@
                             <constraint firstItem="OZT-BG-PfU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mhu-YD-MZk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="OZT-BG-PfU" id="253-u8-KM9"/>
+                        <outletCollection property="lightsLabels" destination="Dp8-Uh-4dx" collectionClass="NSMutableArray" id="y91-Ve-8wW"/>
+                        <outletCollection property="lightsLabels" destination="c6w-9y-4IZ" collectionClass="NSMutableArray" id="Naa-oN-lmR"/>
+                        <outletCollection property="lightsLabels" destination="UQj-PH-3yl" collectionClass="NSMutableArray" id="qjY-p1-FRf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="69.642857142857139"/>
+            <point key="canvasLocation" x="33.644859813084111" y="69.330453563714912"/>
         </scene>
     </scenes>
     <resources>
