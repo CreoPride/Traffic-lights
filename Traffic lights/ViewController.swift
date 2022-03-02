@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     @IBAction func nextButtonTaped() {
         nextButton.configuration?.title = "NEXT"
         nextButton.configuration?.attributedTitle?.font = .boldSystemFont(ofSize: 30)
-        
+
         switch activeLight {
         case .red:
             activeLight = .yellow
