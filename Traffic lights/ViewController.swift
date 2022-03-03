@@ -25,7 +25,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.configuration = nextButtonConfiguration()
-        initialViewsConfiguration()
+
+        redLightLabel.backgroundColor = UIColor(red: 1, green: 0.149, blue: 0, alpha: 1)
+        yellowLightLabel.backgroundColor = UIColor(red: 1, green: 0.986, blue: 0, alpha: 1)
+        greenLightLabel.backgroundColor = UIColor(red: 0.447, green: 0.961, blue: 0.290, alpha: 1)
+
+        redLightLabel.alpha = lightOff
+        yellowLightLabel.alpha = lightOff
+        greenLightLabel.alpha = lightOff
+    }
+
+    override func viewDidLayoutSubviews() {
+        redLightLabel.layer.cornerRadius = redLightLabel.frame.height / 2
+        yellowLightLabel.layer.cornerRadius = redLightLabel.layer.cornerRadius
+        greenLightLabel.layer.cornerRadius = redLightLabel.layer.cornerRadius
     }
 
     @IBAction func nextButtonTaped() {
@@ -56,20 +69,6 @@ class ViewController: UIViewController {
         button.cornerStyle = .medium
         button.buttonSize = .large
         return button
-    }
-
-    private func initialViewsConfiguration() {
-        redLightLabel.backgroundColor = UIColor(red: 1, green: 0.149, blue: 0, alpha: 1)
-        yellowLightLabel.backgroundColor = UIColor(red: 1, green: 0.986, blue: 0, alpha: 1)
-        greenLightLabel.backgroundColor = UIColor(red: 0.447, green: 0.961, blue: 0.290, alpha: 1)
-
-        redLightLabel.alpha = lightOff
-        yellowLightLabel.alpha = lightOff
-        greenLightLabel.alpha = lightOff
-
-        redLightLabel.layer.cornerRadius = redLightLabel.frame.height / 2
-        yellowLightLabel.layer.cornerRadius = redLightLabel.layer.cornerRadius
-        greenLightLabel.layer.cornerRadius = redLightLabel.layer.cornerRadius
     }
 }
 
